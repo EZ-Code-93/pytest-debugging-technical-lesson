@@ -9,6 +9,8 @@ def multiply(a, b):
 
 def divide(a, b):
 	# Intentionally ignoring divide-by-zero check for now
+	if b == 0:
+		raise ZeroDivisionError("Cannot divide by zero")
 	return a / b
 
 if __name__ == "__main__":
@@ -18,3 +20,5 @@ if __name__ == "__main__":
 	print(f"10 - 5 = {subtract(10, 5)}")
 	print(f"4 * 3 = {multiply(4, 3)}")
 	print(f"8 / 2 = {divide(8, 2)}")
+
+	print(f"5 / 0 = {divide(5, 0)}")
